@@ -1,4 +1,6 @@
+<?php 
 include('./includes/connect.inc.php');
+?>
 	<body>
 		<div class="form">
 			<h2>Prediction <a style="float :right"; href="images/demo.jpg" class="group1">Demo Form</a></h2><hr><br>
