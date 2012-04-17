@@ -1,6 +1,4 @@
-<?php include("connect.inc.php");
-include 'session.php'; ?>
-
+<?php include("connect.inc.php");?>
 	<body>
 		<div class="form">
 			<h2>Register<a href="Login.php" style="float: right;">Login</a></h2><hr />
