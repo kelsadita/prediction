@@ -1,4 +1,4 @@
-<?php include("connect.inc.php"); ?>
+<?php include("connect.inc.php");?>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
