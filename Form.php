@@ -1,5 +1,5 @@
 <?php 
-include('./includes/connect.inc.php');
+include('connect.inc.php');
 ?>
 	<body>
 		<div class="form">
