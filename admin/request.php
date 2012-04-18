@@ -1,5 +1,7 @@
 <?php 
 include("includes/connect.inc.php");
+if($_SESSION['uid']!=2)
+header('localtion: form.php');
 ?>
 	<body>
 		<div class="form">
