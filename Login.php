@@ -1,9 +1,7 @@
 <?php 
-session_start();
-if(isset($_SESSION['uid'])) header("Location: Form.php");
+//if(isset($_SESSION['uid'])) header("Location: form.php");
 include("includes/connect.inc.php");
-
- ?>
+?>
 	<body>
 		<div class="form">
 			<h2>Login</h2><hr />
@@ -24,7 +22,7 @@ include("includes/connect.inc.php");
 								echo "<p class='notify'>Yeah</p>";
 								
 								$_SESSION['uid'] = $row['id'];
-								header("Location: Form.php");
+								header("Location: form.php");
 								
 							}
 							else

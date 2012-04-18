@@ -1,4 +1,6 @@
+<?php 
 include("includes/connect.inc.php");
+?>
 	<body>
 		<div class="form">
 			<h2>Requests</h2><hr />

@@ -1,8 +1,6 @@
 <?php
-ob_start();
-session_start();
+include("includes/connect.inc.php");
 $_SESSION = array();
 session_destroy();
-header("Location : Login.php");
-ob_flush();
+header("Location: login.php");
 ?>

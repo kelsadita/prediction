@@ -15,5 +15,5 @@ if(isset($_GET['id'])&&isset($_GET['id']))
 		mysqli_query($db,$query);
 	}
 }
-header('location:Request.php');
+header('location:request.php');
 ?>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'algo.class.php';
 include 'includes/connect.inc.php';
 ?>
