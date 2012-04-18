@@ -1,5 +1,5 @@
 <?php 
-include("../includes/connect.inc.php");
+include("includes/connect.inc.php");
 if(isset($_GET['id'])&&isset($_GET['id']))
 {
 	$db = mysqli_connect(HOST,USER,PASSWORD,NAME);

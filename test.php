@@ -4,6 +4,7 @@ include 'algo.class.php';
 ?>
 	<body>
 		<div class="form">
+			<h2><a href="Logout.php">Logout</a></h2>
 			<h2><a href="form.php">Prediction</a> <a style="float :right"; href="images/demo.jpg" class="group1">Demo Form</a></h2><hr><br>
 		<form class="cmxform" id="commentForm" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
 				

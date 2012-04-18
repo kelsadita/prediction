@@ -15,17 +15,21 @@ include("includes/connect.inc.php");
 						$query="select * from login where email='$email' and password=SHA('$password')";
 						$data=mysqli_query($db,$query);	
 						$row=mysqli_fetch_array($data);
-						if($row['auth']==1)
+						if($row['auth']==1||$row['auth']==2)
 						{
 							if(mysqli_num_rows($data)==1)
 							{
-								echo "<p class='notify'>Yeah</p>";								
 								$_SESSION['uid'] = $row['id'];
-								if($_SESSION['uid']==2)
-								header("Location: request.php");
-								else
-								header("Location: form.php");
-								
+								$_SESSION['auth']=$row['auth'];
+								if($_SESSION['auth']==2)
+								{
+									header("Location: request.php");
+								}
+								elseif($_SESSION['auth']==1)
+								{
+									header("Location: form.php");
+								}
+								echo $_SESSION['uid'];
 							}
 							else
 							{

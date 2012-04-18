@@ -1,10 +1,13 @@
 <?php 
-include("../includes/connect.inc.php");
-if($_SESSION['uid']!=2)
-header('localtion: form.php');
+include("includes/connect.inc.php");
+if($_SESSION['auth']!=2)
+{
+	header('localtion: form.php');
+}
 ?>
 	<body>
 		<div class="form">
+			<h2><a href="Logout.php">Logout</a></h2>
 			<h2>Requests</h2><hr />
 			<?php
 				$db = mysqli_connect(HOST,USER,PASSWORD,NAME);
