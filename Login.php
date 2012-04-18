@@ -19,9 +19,11 @@ include("includes/connect.inc.php");
 						{
 							if(mysqli_num_rows($data)==1)
 							{
-								echo "<p class='notify'>Yeah</p>";
-								
+								echo "<p class='notify'>Yeah</p>";								
 								$_SESSION['uid'] = $row['id'];
+								if($_SESSION['uid']==2)
+								header("Location: request.php");
+								else
 								header("Location: form.php");
 								
 							}
