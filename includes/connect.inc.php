@@ -1,7 +1,7 @@
 <?php
   define('HOST', 'localhost');
   define('USER', 'root');
-  define('PASSWORD', '');
+  define('PASSWORD', 'root');
   define('NAME', 'Per_prediction');
   ob_start();
   if(!session_start())

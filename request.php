@@ -6,21 +6,24 @@ if($_SESSION['auth']!=2)
 }
 ?>
 	<body>
+		<?php
+		include 'header.php'
+		?>
 		<div class="form">
-			<h2><a href="Logout.php">Logout</a></h2>
-			<h2>Requests</h2><hr />
+			<h2>Requests<a href="Logout.php" style="float: right;">Logout</a></h2><hr /><br />
 			<?php
 				$db = mysqli_connect(HOST,USER,PASSWORD,NAME);
 				$query="select * from login where auth=0";
 				$data=mysqli_query($db,$query);
 				?>
-				<table>
+				<table style=" width: 600px; margin: 0 auto; padding: 10px;border: 2;border-color: black;">
 					<tr>
 						<td>Name</td>
 						<td>Email</td>
 						<td></td>
 						<td></td>
 					</tr>
+					<tr><td colspan="4"><hr></td></tr>
 				<?php
 				while($row=mysqli_fetch_array($data))
 				{
@@ -30,7 +33,8 @@ if($_SESSION['auth']!=2)
 						<td><?php echo $row['email']?></td>
 						<td><a href="approve.php?id=1&&uid=<?php echo $row['id']?>">Approve</a></td>
 						<td><a href="approve.php?id=2&&uid=<?php echo $row['id']?>">Reject</a></td>
-					</tr>	
+					</tr>
+					<tr><td colspan="4"><hr></td></tr>	
 				<?php
 				}
 				?>

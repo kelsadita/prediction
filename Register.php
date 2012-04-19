@@ -1,7 +1,10 @@
 <?php include("includes/connect.inc.php");?> 
 	<body>
+		<?php
+		include 'header.php'
+		?>
 		<div class="form">
-			<h2>Register<a href="Login.php" style="float: right;">Login</a></h2><hr />
+			<h2>Register<a href="Login.php" style="float: right;">Login</a></h2><hr /><br />
 			<?php
 				if(isset($_POST['register']))
 				{

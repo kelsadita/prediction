@@ -3,8 +3,11 @@
 include("includes/connect.inc.php");
 ?>
 	<body>
+	<?php
+		include 'header.php'
+	?>
 		<div class="form">
-			<h2>Login</h2><hr />
+			<h2>Login<a href="register.php" style="float: right;">Register</a></h2><hr /><br />
 			<?php
 				if(isset($_POST['login']))
 				{
@@ -51,7 +54,7 @@ include("includes/connect.inc.php");
 				<label>Email ID</label>
 				<input type="text" name="email" class="required"/><br /><br />
 				<label>Password</label>
-				<input type="password" name="password" class="required" /><br /><br />
+				<input type="password" name="password" id = "pwd" class="required" /><br /><br />
 				<label>&nbsp;</label>
 				<input type="submit" value="login" name="login" class="button"/>
 			</form>

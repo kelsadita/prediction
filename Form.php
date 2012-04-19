@@ -3,9 +3,12 @@ include 'algo.class.php';
 include 'includes/connect.inc.php';
 ?>
 	<body>
+		<?php
+		include 'header.php'
+		?>
 		<div class="form">
-			<h2><a href="Logout.php">Logout</a></h2>
-			<h2><a href="form.php">Prediction</a> <a style="float :right"; href="test.php">Bulk Evaluation</a></h2><hr><br>
+			
+			<h2><a href="form.php">Prediction</a> <a href="Logout.php" style="float:right;">&nbsp;Logout</a><a style="float :right"; href="test.php">Bulk Evaluation |</a></h2><hr><br>
 		<form class="cmxform" id="commentForm" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
 			<label>Name : </label>
 			<input type="text" name="name" class="required" value="FirstName LastName" title="FirstName LastName"/><br><br>
@@ -72,69 +75,6 @@ include 'includes/connect.inc.php';
 				
 					$merit = "bad";
 				}
-			/*	
-				function dtalgo($percent, $merit, $ad_type, $gender){ 
-					if($percent === "distinction"){ 
-					
-						if($ad_type === "AI"){ 
-						
-							if($gender === "Female"){ 
-								
-								$result = "pass";
-
-							}else{ 
-								
-								if($merit === "bad"){ 
-									
-									$result = "fail";
-
-								}else { 
-								
-									$result = "pass";
-
-								}
-							}
-
-						}else{ 
-						
-							$result = "pass";
-						}	
-					
-					}elseif ($percent === "first_class"){ 
-							
-						if($merit === "bad"){ 
-						
-							if($ad_type === "AI"){ 
-							
-								if ($gender === "Female") {
-									
-									$result = "pass";
-								}else {
-									$result = "fail";
-								}
-
-							}else{ 
-							
-								$result = "fail";
-							}
-						
-						} else { 
-							
-							$result = "pass";
-						}
-
-					}else{ 
-					
-						if ($merit === "bad") {
-							$result = "fail";
-						}else {
-							$result = "pass";
-						}
-					}
-
-					return $result;
-				}
-				*/
 				
 				if($algo_type === "ALGO 1"){
 					$obj = new Algo();
@@ -156,9 +96,8 @@ include 'includes/connect.inc.php';
 					$result = $obj->dtalgo4($percent, $merit, $ad_type, $gender);
 					echo "<center><h2>The student is $result !<h2></center>";
 				}
-				
-				
-				$query = "insert into test_records values('', '$name', '$gender', '$appid', '$pcm_per', '$meritmks', '$adtype', '$result')";
+				$staff_id = $_SESSION['uid'];
+				$query = "insert into test_records values('', '$name', '$gender', '$appid', '$pcm_per', '$meritmks', '$adtype', '$result',$staff_id)";
 				mysqli_query($db, $query);
 
 			}
