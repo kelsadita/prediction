@@ -53,10 +53,11 @@ a
 body 
 { 	
 	font-size: 13px;
-	background:url('../images/bg_body.jpg');	
+	padding:0;
 	font-family:Verdana,Helvetica,Lucida Grande,Calibri, 
 	Arial;
 	min-height: 500px;
+	background:url('../images/bg_body.jpg');	
 }
 /*-----link style-----*/
 .form

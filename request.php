@@ -7,10 +7,10 @@ if($_SESSION['auth']!=2)
 ?>
 	<body>
 		<?php
-		include 'header.php'
+		include './includes/header.inc.php';
 		?>
 		<div class="form">
-			<h2>Requests<a href="Logout.php" style="float: right;">Logout</a></h2><hr /><br />
+			<h2>Requests<a href="logout.php" style="float: right;">Logout</a></h2><hr /><br />
 			<?php
 				$db = mysqli_connect(HOST,USER,PASSWORD,NAME);
 				$query="select * from login where auth=0";

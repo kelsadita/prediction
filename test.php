@@ -4,11 +4,11 @@ include 'algo.class.php';
 ?>
 	<body>
 		<?php
-		include 'header.php'
+		include './includes/header.inc.php'
 		?>
 		<div class="form">
 			
-			<h2><a href="form.php">Prediction</a> <a href="Logout.php" style="float:right;"> | Logout</a> <a style="float :right"; href="images/demo.jpg" class="group1">Demo Form &nbsp;</a></h2><hr><br>
+			<h2><a href="form.php">Prediction</a> <a href="logout.php" style="float:right;"> | Logout</a> <a style="float :right"; href="images/demo.jpg" class="group1">Demo Form &nbsp;</a></h2><hr><br>
 		<form class="cmxform" id="commentForm" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
 				
 			<label>Algorithm Type : </label>

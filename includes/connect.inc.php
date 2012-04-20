@@ -1,7 +1,7 @@
 <?php
   define('HOST', 'localhost');
   define('USER', 'root');
-  define('PASSWORD', 'root');
+  define('PASSWORD', '');
   define('NAME', 'Per_prediction');
   ob_start();
   if(!session_start())
@@ -10,7 +10,8 @@
   header("location: login.php");
 ?>
 <html>
-	<head>
+    <head>
+		<title>Performace Prediction</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/colorbox.css" />
 		<script type="text/javascript" src="js/jquery-latest.js"></script>
