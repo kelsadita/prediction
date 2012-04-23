@@ -30,10 +30,10 @@ include 'includes/connect.inc.php';
 	
 			<label>Algorithm Type : </label>
 			<select name="algo_type" id="select">
-				<option>ALGO 1</option>
-				<option>ALGO 2</option>
-				<option>ALGO 3</option>
-				<option>ALGO 4</option>
+				<option>Decision Tree</option>
+				<option>C4.5</option>
+				<option>Decision Tree with Accuracy</option>
+				<option>ID3</option>
 			</select><br><br>
 
 			<label>&nbsp;</label>
@@ -74,22 +74,22 @@ include 'includes/connect.inc.php';
 					$merit = "bad";
 				}
 				
-				if($algo_type === "ALGO 1"){
+				if($algo_type === "Decision Tree"){
 					$obj = new Algo();
 					$result = $obj->dtalgo1($percent, $merit, $ad_type, $gender);
 					echo "<center><h2>The student is $result !<h2></center>";
 				}
-				if($algo_type === "ALGO 2"){
+				if($algo_type === "C4.5"){
 					$obj = new Algo();
 					$result = $obj->dtalgo2($percent, $merit, $ad_type, $gender);
 					echo "<center><h2>The student is $result !<h2></center>";
 				}
-				if($algo_type === "ALGO 3"){
+				if($algo_type === "Decision Tree with Accuracy"){
 					$obj = new Algo();
 					$result = $obj->dtalgo3($percent, $merit, $ad_type, $gender);
 					echo "<center><h2>The student is $result !<h2></center>";
 				}
-				if($algo_type === "ALGO 4"){
+				if($algo_type === "ID3"){
 					$obj = new Algo();
 					$result = $obj->dtalgo4($percent, $merit, $ad_type, $gender);
 					echo "<center><h2>The student is $result !<h2></center>";
